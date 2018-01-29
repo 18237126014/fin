@@ -1,0 +1,137 @@
+.social_main>ul>li {
+    position: relative;
+    float: left;
+    text-align: left;
+    width: 100%;
+    display: list-item;
+    background: #fff;
+}
+.main {
+	width: 100%;
+    clear: both;
+    position: relative;
+    float: left;
+}
+.main .main_img {
+    background: linear-gradient(to top , #DEDEDE, #E9E9E9);
+}
+.main .img {
+    height: 500px;
+    width: 1280px;
+    position: relative;
+    margin: 0 auto;
+
+}
+.social_main .title_year {
+    position: absolute;
+    top: 100px;
+    color: #888888;
+}
+.social_main .title_date {
+    position: absolute;
+    top: 130px;
+    color: #6F6F6F;
+    font-weight: bold;
+}
+.social_main .title_dable {
+    position: absolute;
+    top: 100px;
+    left: 330px;
+    font-size: 24px;
+    color: #B18741;
+}
+.social_main .title_desc {
+    position: absolute;
+    top: 137px;
+    left: 330px;
+    font-size: 12px;
+    height: 54px;
+    color: #7B7B7B;
+    line-height: 20px;
+}
+.social_main>ul>li {
+    position: relative;
+    float: left;
+    text-align: left;
+    width: 100%;
+    display: list-item;
+    background: #fff;
+}
+.social_main  .main_one  .social_content {
+    width: 1280px;
+    position: relative;
+    margin: 0 auto;
+    height: 480px;
+}
+.social_content .social_banner img{
+    width: 260px;
+    height: 175px;
+
+}
+.social_content .social_down {
+    position: relative;
+    width: 1280px;
+    margin: 0 auto;
+    height: 175px;
+    float: left;
+    overflow: hidden;
+    margin-top: 250px; 
+}
+.social_down .social_banner {
+    width: 1280px;
+    margin: 0 auto;
+    height: 175px;
+    transition: 2.5s;
+    overflow: hidden;
+}
+.social_banner .list {
+    position: absolute;
+    width: 100%;
+}
+.social_banner .list li {
+    float: left;
+    width: 260px;
+    height: 175px;
+    text-align: center;
+    background-color: #fff;
+}
+.social_banner .list li a {
+     position: relative;
+     display: block;
+}
+.actLink img {
+    cursor: url(../images/zoom_in.ico),auto;
+}
+.social_main>ul>li:nth-child(even) {
+    background: #EEEEEE;
+} 
+.social_content .social_tool {
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    cursor: pointer;
+    color: #B18741;
+    width: 60px;
+    z-index: 999;
+}
+.social_content .social_tool>div {
+    margin-top: 15px;
+}
+.social_content .overflowH p {
+    height: 36px;
+    overflow: hidden;
+}
+.demo {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+.zoom0 {
+    position: relative;
+    top: 87.5px;
+    left: -250px;
+    width: 260px;
+    height: 175px;
+    transition: 0.5s;
+    cursor: url(../images/zoom_out.ico),auto;
+}
