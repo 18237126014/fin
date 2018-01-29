@@ -23,6 +23,10 @@ Route::group(['namespace'=>'Home'],function()
     Route::get('/','IndexController@index');
     //关于我们-中心简介
     Route::get('related','IndexController@aboutUs');
+    //中心简介
+    Route::get('related/profile','IndexController@aboutUs');
+    //关于我们-组织架构
+    Route::get('related/organizationalstructure','IndexController@organizationalStructure');
     
 });
 

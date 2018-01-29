@@ -16,4 +16,10 @@ class IndexController extends HomeController
     {
         return view('home.aboutus.aboutUs',$this->assign);
     }
+    //组织架构
+     public function organizationalStructure()
+    {
+        return view('home.aboutus.organizationalstructure');
+    }
+
 }

@@ -8,7 +8,6 @@
     <meta name="description" content="@yield('description', '长江')" />
     
     <script src="{{url('/js/home/jquery.min.js')}}"></script>
-    
     @yield('my-css')
     @yield('my-js')
 </head>
@@ -32,7 +31,7 @@
                 @if(!empty($menu_list))
                     @foreach($menu_list as $menu)
                         <li class="pmenu navColor">
-                            <a class="gv" href="{{$menu['column_chaining']}}">{{$menu['column_name']}}</a>
+                            <a class="ov" href="{{$menu['column_chaining']}}">{{$menu['column_name']}}</a>
                             @if(!empty($menu['list']))
                              <div class="submenu_cnt">
                                 <ul class="two">

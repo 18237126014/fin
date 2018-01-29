@@ -128,7 +128,7 @@
 /*中心简介 over*/
 /*组织架构*/
 .os-img {
-    background: url(images/home/zzjg.png) 49% 0 no-repeat;
+    background: url(/images/home/zzjg.png) 49% 0 no-repeat;
     background-size: 100%;
     width: 100%;
     height: 1276px;
@@ -1655,7 +1655,7 @@ opacity: 0;
     height:70px;
     overflow:hidden;
     padding: 0 20px;
-    background:url("images/home/flicknavbg.jpg") repeat-x ;
+    background:url("/images/home/flicknavbg.jpg") repeat-x ;
 }
 
 .flickerMain{

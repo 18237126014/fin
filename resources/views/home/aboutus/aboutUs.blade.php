@@ -217,7 +217,7 @@
 			<div class="video">
 				<div class="cnt_introduce_video">
 					<a href="javascript:void(0)" class="shipinbtn">
-					<img src="images/home/video1.png" width="800" height="370" alt="" />
+					<img src="/images/home/video1.png" width="800" height="370" alt="" />
 					</a>
 				</div>
 			</div>
