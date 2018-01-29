@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : zhenzhen
-Source Server Version : 50711
+Source Server         : 本机
+Source Server Version : 50714
 Source Host           : localhost:3306
 Source Database       : finance
 
 Target Server Type    : MYSQL
-Target Server Version : 50711
+Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2018-01-29 00:21:22
+Date: 2018-01-29 17:51:36
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -85,16 +85,16 @@ CREATE TABLE `zwf_admin_column` (
 INSERT INTO `zwf_admin_column` VALUES ('1', '关于我们', '0', '0,', 'related', '/related', '1', '1', null, null, '1', '2017-11-29 13:39:17', '2017-11-30 09:20:42');
 INSERT INTO `zwf_admin_column` VALUES ('3', '中心简介', '1', '0,1', 'profile', '/related/profile', '1', '1', '/images/home/1470132689039080480.png', '/images/home/1470132690290083868.png', '0', '2017-11-30 10:10:45', '2017-11-30 10:10:45');
 INSERT INTO `zwf_admin_column` VALUES ('4', '信息中心', '0', '0,', 'information', '/information', '1', '1', null, null, '2', '2017-11-30 15:13:19', '2017-11-30 15:13:19');
-INSERT INTO `zwf_admin_column` VALUES ('5', '中心公告', '4', '0,4', 'announcement', '/information/announcement', '1', '1', null, null, '0', '2017-11-30 15:13:39', '2017-11-30 15:13:39');
-INSERT INTO `zwf_admin_column` VALUES ('6', '中心动态', '4', '0,4', 'dynamics', '/information/dynamics', '1', '1', null, null, '0', '2017-11-30 15:14:06', '2018-01-24 14:11:39');
-INSERT INTO `zwf_admin_column` VALUES ('7', '资讯要闻', '4', '0,4', 'impnews', '/information/impnews', '1', '1', null, null, '0', '2017-11-30 15:23:46', '2017-11-30 15:23:46');
+INSERT INTO `zwf_admin_column` VALUES ('5', '中心公告', '4', '0,4', 'announcement', '/information/announcement', '1', '1', '/images/home/1470980324577050576.png', '/images/home/1470980321094068281.png', '0', '2017-11-30 15:13:39', '2017-11-30 15:13:39');
+INSERT INTO `zwf_admin_column` VALUES ('6', '中心动态', '4', '0,4', 'dynamics', '/information/dynamics', '1', '1', '/images/home/1470980349314080752.png', '/images/home/1470980344993043989.png', '0', '2017-11-30 15:14:06', '2018-01-24 14:11:39');
+INSERT INTO `zwf_admin_column` VALUES ('7', '资讯要闻', '4', '0,4', 'impnews', '/information/impnews', '1', '1', '/images/home/1470132846892068195.png', '/images/home/1470132847938083162.png', '0', '2017-11-30 15:23:46', '2017-11-30 15:23:46');
 INSERT INTO `zwf_admin_column` VALUES ('8', '投资者教育', '0', '0,', 'education', '/education', '1', '1', null, null, '7', '2017-11-30 15:24:43', '2017-11-30 15:24:43');
-INSERT INTO `zwf_admin_column` VALUES ('9', '法律法规', '8', '0,8', 'law', '/education/law', '1', '1', null, null, '0', '2017-11-30 15:25:13', '2017-11-30 15:25:13');
-INSERT INTO `zwf_admin_column` VALUES ('10', '业务规范', '8', '0,8', 'business', '/education/business', '1', '1', null, null, '0', '2017-11-30 15:25:46', '2017-11-30 15:25:46');
-INSERT INTO `zwf_admin_column` VALUES ('11', '风险管理与防范', '8', '0,8', 'risk', '/education/risk', '1', '1', null, null, '0', '2017-11-30 15:26:27', '2017-11-30 15:26:27');
-INSERT INTO `zwf_admin_column` VALUES ('12', '投资者权益保护', '8', '0,8', 'equity', '/education/equity', '1', '1', null, null, '0', '2017-11-30 15:27:04', '2017-11-30 15:27:04');
-INSERT INTO `zwf_admin_column` VALUES ('13', '产品知识', '8', '0,8', 'knowledge', '/education/knowledge', '1', '1', null, null, '0', '2017-11-30 15:27:30', '2017-11-30 15:27:30');
-INSERT INTO `zwf_admin_column` VALUES ('14', '常见问题', '8', '0,8', 'question', '/education/question', '1', '1', null, null, '0', '2017-11-30 15:28:07', '2018-01-04 09:45:32');
+INSERT INTO `zwf_admin_column` VALUES ('9', '法律法规', '8', '0,8', 'law', '/education/law', '1', '1', '/images/home/1470133109939053904.png', '/images/home/1470133110699044033.png', '0', '2017-11-30 15:25:13', '2017-11-30 15:25:13');
+INSERT INTO `zwf_admin_column` VALUES ('10', '业务规范', '8', '0,8', 'business', '/education/business', '1', '1', '/images/home/1470979900633086127.png', '/images/home/1470979904060073827.png', '0', '2017-11-30 15:25:46', '2017-11-30 15:25:46');
+INSERT INTO `zwf_admin_column` VALUES ('11', '风险管理与防范', '8', '0,8', 'risk', '/education/risk', '1', '1', '/images/home/1470980303779080316.png', '/images/home/1470980298085010119.png', '0', '2017-11-30 15:26:27', '2017-11-30 15:26:27');
+INSERT INTO `zwf_admin_column` VALUES ('12', '投资者权益保护', '8', '0,8', 'equity', '/education/equity', '1', '1', '/images/home/1470980270485079433.png', '/images/home/1470980262389051972.png', '0', '2017-11-30 15:27:04', '2017-11-30 15:27:04');
+INSERT INTO `zwf_admin_column` VALUES ('13', '产品知识', '8', '0,8', 'knowledge', '/education/knowledge', '1', '1', '/images/home/1470980127432067424.png', '/images/home/1470980124969001196.png', '0', '2017-11-30 15:27:30', '2017-11-30 15:27:30');
+INSERT INTO `zwf_admin_column` VALUES ('14', '常见问题', '8', '0,8', 'question', '/education/question', '1', '1', '/images/home/1470133156637090590.png', '/images/home/1470133157455051879.png', '0', '2017-11-30 15:28:07', '2018-01-04 09:45:32');
 INSERT INTO `zwf_admin_column` VALUES ('15', '联系我们', '0', '0,', 'contact', '/contact', '1', '1', null, null, '8', '2017-11-30 15:47:35', '2017-11-30 15:47:35');
 INSERT INTO `zwf_admin_column` VALUES ('16', '职位招聘', '15', '0,15', 'recruit', '/contact/recruit', '1', '1', null, null, '0', '2017-11-30 15:48:04', '2018-01-28 11:53:55');
 INSERT INTO `zwf_admin_column` VALUES ('17', '上市品种', '0', '0,', 'variety', '/variety', '1', '1', null, null, '3', '2018-01-28 23:21:18', '2018-01-28 23:24:07');
@@ -107,7 +107,7 @@ INSERT INTO `zwf_admin_column` VALUES ('23', '开户流程', '0', '0,', 'service
 INSERT INTO `zwf_admin_column` VALUES ('24', '持仓数据', '0', '0,', 'metals', '/metals', '1', '1', null, null, '6', '2018-01-28 23:31:00', '2018-01-28 23:31:00');
 INSERT INTO `zwf_admin_column` VALUES ('25', '社会责任', '0', '0,', 'social', '/social', '1', '1', null, null, '9', '2018-01-28 23:32:12', '2018-01-28 23:32:12');
 INSERT INTO `zwf_admin_column` VALUES ('28', '组织架构', '1', '0,1', 'organizationalstructure', '/related/organizationalstructure', '1', '1', '/images/home/1470132724809028526.png', '/images/home/1470132725887050169.png', '0', '2018-01-29 00:01:22', '2018-01-29 00:01:22');
-INSERT INTO `zwf_admin_column` VALUES ('29', '发展历程', '1', '0,1', 'development', '/related/development', '1', '1', null, null, '0', '2018-01-29 00:02:21', '2018-01-29 00:02:21');
+INSERT INTO `zwf_admin_column` VALUES ('29', '发展历程', '1', '0,1', 'development', '/related/development', '1', '1', '/images/home/1470132742705094983.png', '/images/home/1470132743659099956.png', '0', '2018-01-29 00:02:21', '2018-01-29 00:02:21');
 
 -- ----------------------------
 -- Table structure for zwf_admin_contact
