@@ -6,19 +6,18 @@
     <title>@yield('title', '首页')</title>
     <meta name="keywords" content="@yield('keyword', '长江')" />
     <meta name="description" content="@yield('description', '长江')" />
-    
-    <script src="{{url('/js/home/jquery.min.js')}}"></script>
     @yield('my-css')
+    <script src="{{url('/js/home/jquery.min.js')}}"></script>
     @yield('my-js')
 </head>
 <body>
     <div class="header" style="height: 128px;">
         <div class="warp">
             <div class="logo"><a href="index.html"><img src="/images/home/logo.png" alt=""></a></div>
-            <!-- <div class="logo-btn">
+            <div class="logo-btn">
                 <a href="javascript:void(0)"><div class="gold">开户领赠金</div></a>
                 <a href="javascript:void(0)"><div class="normal">模拟开户</div></a>
-            </div> -->
+            </div>
         </div>
         
 
