@@ -19,8 +19,6 @@
                 <a href="javascript:void(0)"><div class="normal">模拟开户</div></a>
             </div>
         </div>
-        
-
 <!-- 导航栏 -->
         <div class="nav">
             <ul>

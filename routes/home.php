@@ -31,7 +31,15 @@ Route::group(['namespace'=>'Home'],function()
     Route::get('related/development','IndexController@develoPment');
     //信息中心-中心公告
     Route::get('information','IndexController@information');
-    
+    Route::get('information/announcement','IndexController@information');
+    //信息中心-资讯要闻
+    Route::get('information/impnews','IndexController@impnews');
+    //信息中心-中心动态
+    Route::get('information/dynamics','IndexController@dynamics');
+    //上市品种
+    Route::get('variety','IndexController@variety');
+    //下载中心
+    Route::get('download','IndexController@download');
 });
 
 

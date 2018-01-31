@@ -30,6 +30,27 @@ class IndexController extends HomeController
     //信息中心-中心公告
     public function information()
     {
-    	return view('home.information.information');
+    	return view('home.information.information',$this->assign);
     }
+    //信息中心-中心动态
+    public function dynamics()
+    {
+    	return view('home.information.dynamics',$this->assign);
+    }
+    //信息中心-资讯要闻
+    public function impnews()
+    {
+    	return view('home.information.impnews',$this->assign);
+    }
+    //上市品种
+    public function variety()
+    {
+    	return view('home.variety.variety',$this->assign);
+    }
+    //下载中心
+    public function download()
+    {
+    	return view('home.download.download',$this->assign);
+    }
+    
 }
