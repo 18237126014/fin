@@ -8,8 +8,8 @@
 @endsection
 @section('my-js')
 <script src="{{url('/js/home/jquery.min.js')}}"></script>
-<!-- <script src="{{url('/js/home/bootstrap.min.js')}}"></script> -->
-<!-- <script type="text/javascript" src="{{url('/js/home/common.js')}}"></script> -->
+<script src="{{url('/js/home/bootstrap.min.js')}}"></script>
+<script type="text/javascript" src="{{url('/js/home/common.js')}}"></script>
 <script type="text/javascript" src="{{url('/js/home/index.js')}}"></script>
 <script src="{{url('/plugin/scrollReveal/scrollReveal.min.js')}}"></script>
 @endsection

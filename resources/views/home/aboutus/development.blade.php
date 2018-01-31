@@ -1,30 +1,19 @@
 @extends('home.public.base')
 @section('title', '关于我们-发展历程')
 @section('my-css')
-<link rel="stylesheet" type="text/css" href="{{url('/css/home/index.css')}}">
+<link rel="stylesheet" type="text/css" href="{{url('/css/home/CSS.css')}}">
 <link rel="stylesheet" type="text/css" href="{{url('/css/home/share.css')}}">
 <link rel="stylesheet" type="text/css" href="{{url('/plugin/developmentHistory/animation.css')}}" media="all" />
 <link rel="stylesheet" type="text/css" href="{{url('/plugin/developmentHistory/flickerplate.css')}}" >
 @endsection
 @section('my-js')
-<script type="text/javascript" src="{{url('/js/home/jquery.min.js')}}" ></script>
-<script type="text/javascript" src="{{url('/js/home/development.js')}}" ></script>
 <script type="text/javascript" src="{{url('/plugin/developmentHistory/modernizr-custom-v2.7.1.min.js')}}"></script>
 <script type="text/javascript" src="{{url('/plugin/developmentHistory/jquery-finger-v0.1.0.min.js')}}"></script>
 <script type="text/javascript" src="{{url('/js/home/common.js')}}"></script>
 <script type="text/javascript" src="{{url('/js/home/index.js')}}"></script>
 <script src="{{url('/plugin/scrollReveal/scrollReveal.min.js')}}"></script>
+<script type="text/javascript" src="{{url('/js/home/development.js')}}" ></script>
 @endsection
-
-        <!--nav-bottom-->
-        <!--nav-bottom-->
-            <div class="nav-bottom">
-                <ul>
-                    <li><a href="aboutUs.html">中心简介</a></li>
-                    <li><a href="organizationalStructure.html">组织架构</a></li>
-                    <li><a class="active" href="developmentHistory.html">发展历程</a></li>
-                </ul>
-            </div>
     
 @section('content')
 <div class="main">
@@ -224,116 +213,4 @@
     
         </div>
    </div>
-   @endsection
-
-    <!-- 尾部 -->
-   <!-- <div class="footer">
-        <div class="top"></div>
-        <div class="footerCenter">
-            <div class="left">
-                <ul>
-                    <li><a href="aboutUs.html">关于我们</a></li>
-                    <li><a href="download.html">下载中心</a></li>
-                    <li><a href="contactUs.html">联系我们</a></li>
-                    <li><a href="serviceCenter.html">开户流程</a></li>
-                </ul>
-                <h1 class="copyright">All Rights Reserved:Copyright 2010 YANGTZE River United 上海知持动力有限公司</h1>
-                <h1 class="copyright"> <a href="javascript:void(0)">隐私保护申明</a> |<a href="javascript:void(0)"> 服务协议</a> | 沪ICP备15007368号 </h1>
-                <h1 class="copyright"><img src="/images/home/waba.png">沪公网安备 31010502001448号</h1>
-            </div>
-        </div>
-    </div> -->
-
-<!-- <script type="text/javascript">
-    //for fzlc
-    $(document).ready(function(){
-        //calc circle and line position
-        $(".cd-timeline-block").each(function(index){
-            var hasImage = $(this).find(".cd-timeline-content img");
-            if(hasImage.length>0){
-                $(this).find(".cd-timeline-img").css("top","175px");
-                $(this).find(".cd-timeline-line").css("top","182px");
-            }else{
-                $(this).find(".cd-timeline-img").css("top","25px");
-                $(this).find(".cd-timeline-line").css("top","32px");
-            }
-
-        });
-        
-        function flickMovie($root){
-
-            var i=0;
-            var tt=setInterval(function(){
-            //get first root node;
-            if(i<$root.find(".cd-timeline-block").length){
-                $root.find(".cd-timeline-block .cd-timeline-line").eq(i).css({opacity:1});
-                $root.find(".cd-timeline-block .cd-timeline-content").eq(i).css({opacity:1});
-                var suffAppend = "";
-                if(i%2==0){
-                    suffAppend="J";
-                }else{
-                    suffAppend="K";
-                }
-                $root.find(".cd-timeline-block .cd-timeline-line").eq(i).addClass("a-fadein"+suffAppend);
-                $root.find(".cd-timeline-block .cd-timeline-content").eq(i).addClass("a-fadein"+suffAppend);
-                i++;
-            }else{
-                clearInterval(tt);  
-            }
-        },100); 
-        };
-        
-        //time line movement
-        setTimeout(function(){          
-            var $root =  $(".cd-timeline").eq(0);
-            // console.log($root);
-            // return false;
-            flickMovie($root);
-
-        },100);
-        
-        
-        ////headImg loading
-        $('.flickerMain').flicker({auto_flick:0});
-        //year click
-        $(".circle").click(function(){
-            var index = $(this).index();
-            var leftBase = 430;
-            var leftStep = 94;
-            var leftTotel = leftBase-leftStep*index;
-            $(this).parent().animate({ left: leftTotel }, 500);
-            $(".circle").removeClass("circle_selected");
-            $(this).addClass("circle_selected");
-            //nav action
-            $(".dot-navigation li").eq(index).click();
-            //clean move action for all
-            $(".cd-timeline-block .cd-timeline-line").css({opacity:0});
-            $(".cd-timeline-block .cd-timeline-content").css({opacity:0});
-            $(".cd-timeline-block .cd-timeline-line").removeClass("a-fadeinJ");
-            $(".cd-timeline-block .cd-timeline-line").removeClass("a-fadeinK");
-            $(".cd-timeline-block .cd-timeline-content").removeClass("a-fadeinJ");
-            $(".cd-timeline-block .cd-timeline-content").removeClass("a-fadeinK");
-            //add movie and reset height;
-            $(".cd-timeline").each(function(idx){
-                if(index == idx){
-                    var $root = $(this);
-                    $root.removeClass("cd-timeline-hidden");
-                    setTimeout(function(){          
-                    flickMovie($root);
-                    },100);
-                }else{
-                    $(this).addClass("cd-timeline-hidden");
-                }
-            });
-            
-        });
-        
-        // 默认模拟点击第一个导航栏
-        $(".circle_selected").click();
-    });
-
-</script> -->
-</div>
-
-</body>
-</html>
+@endsection

@@ -1,19 +1,20 @@
 @extends('home.public.base')
-@section('title', '首页')
+@section('title', '资讯要闻')
 @section('my-css')
 <link rel="stylesheet" type="text/css" href="{{url('/css/home/bootstrap.min.css')}}">
 <link rel="stylesheet" type="text/css" href="{{url('/css/home/CSS.css')}}">
 <link rel="stylesheet" type="text/css" href="{{url('/css/home/share.css')}}">
-<!-- <link rel="stylesheet" type="text/css" href="{{url('/plugin/pagination/pagination.css')}}"> -->
+<link rel="stylesheet" type="text/css" href="{{url('/plugin/pagination/pagination.css')}}">
 @endsection
 @section('my-js')
-<!-- <link rel="stylesheet" type="text/css" href="{{url('/plugin/pagination/jquery.pagination.js')}}"> -->
+<script src="{{url('/plugin/pagination/jquery.pagination.js')}}"></script>
 <script src="{{url('/js/home/bootstrap.min.js')}}"></script>
-<script src="{{url('/js/home/jquery.min.js')}}"></script>
 <script src="{{url('/plugin/newsInformation/newsInformation.js')}}"></script>
 <script type="text/javascript" src="{{url('/js/home/common.js')}}"></script>
 <script type="text/javascript" src="{{url('/js/home/index.js')}}"></script>
 <script src="{{url('/plugin/scrollReveal/scrollReveal.min.js')}}"></script>
+
+<script src="{{url('/js/home/web/impnews.js')}}"></script>
 @endsection
 	
 	<!--nav-bottom over-->
@@ -321,25 +322,13 @@
 	    <li><a href="#">5</a></li>
 	    <li><a href="#">&raquo;</a></li>
 	</ul><br>
-@endsection
+
 <!-- 尾部 -->
 	
 	
-	<!-- <script>
-			$(function() {
-
-				var $update = $( '#preview > span' );
-
-				$( "#slider" ).pagination( {
-					total : 100,
-					onChange : function( value ) {
-						$update.text( value );
-					}
-				} );
-
-			});
-		</script>
-		<script>
+	
+@endsection
+		<!-- <script>
 		      (function($) {
 		        'use strict';
 		        window.scrollReveal = new scrollReveal({ reset: true, move: '50px' });

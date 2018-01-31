@@ -4,7 +4,7 @@ $(function(){
     b =a.offset();
   $(document).on('scroll',function(){
     var c = $(document).scrollTop();
-    if(b.top<=c){
+    if(b != undefined && b.top<=c){
       a.css({'position':'fixed','top':'60px'})
       }else{
         a.css({'position':'absolute','top':'161px'})
