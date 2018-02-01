@@ -40,6 +40,21 @@ Route::group(['namespace'=>'Home'],function()
     Route::get('variety','IndexController@variety');
     //下载中心
     Route::get('download','IndexController@download');
+    //开户流程
+    Route::get('servicecenter','IndexController@servicecenter');
+    //投资者教育
+    Route::get('education','IndexController@education');
+    Route::get('education/law','IndexController@education');
+
+    //投资者教育-业务规范
+    Route::get('education/business','IndexController@business');
+    //投资者教育-业务规范-现货
+    // Route::get('business/goods','IndexController@goods');
+    // 联系我们
+    Route::get('contact','IndexController@contact');
+    Route::get('contact/recruit','IndexController@contact');
+    //社会责任
+    Route::get('social','IndexController@social');
 });
 
 

@@ -1,0 +1,21 @@
+#center {
+    position: absolute; top: 50%
+}
+#dhtmlbook {
+    background: #000; left: 140px; visibility: hidden; width: 1000px; position: relative; top: -160px; height: 411px;
+}
+#TXTBOX {
+    font-size: 0.8em; width: 410px; color: #aba193;  position: absolute; top: 320px; text-align: center;
+}
+.page {
+    overflow: hidden; width: 50%; cursor: pointer; position: absolute; height: 100%;
+}
+.right {
+    border-right: #000000 1px solid; left: 50%;
+}
+.turn {
+    background: #000000;
+}
+.img {
+    width: 200%; position: absolute; height: 100%;
+}

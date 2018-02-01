@@ -7,6 +7,7 @@ use App\Http\Controllers\Home\HomeController;
 
 class IndexController extends HomeController
 {
+	public $assign = [];
     //显示首页
     public function index()
     {
@@ -52,5 +53,40 @@ class IndexController extends HomeController
     {
     	return view('home.download.download',$this->assign);
     }
-    
+    //开户流程
+    public function serviceCenter()
+    {
+    	return view('home.servicecenter.servicecenter',$this->assign);
+    }
+    //投资者教育
+    public function education()
+    {
+    	return view('home.education.education',$this->assign);
+    }
+    //投资者教育-业务规范
+    public function business()
+    {
+    	return view('home.education.business',$this->assign);
+    }
+    //投资者教育-业务规范-现货
+    // public function goods()
+    // {
+    // 	return view('home.education.goods');
+    // }
+    // 联系我们
+    public function contact()
+    {	
+    	$contents = new \App\Model\Admin\Contact;
+    	$data = $contents->getContact();
+    	$this->assign['data'] = $data;
+    	return view('home.contact.contact',$this->assign);
+        
+    	
+
+    }
+    //社会责任
+    public function social()
+    {
+    	return view('home.social.social',$this->assign);
+    }
 }

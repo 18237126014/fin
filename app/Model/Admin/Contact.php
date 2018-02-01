@@ -13,4 +13,10 @@ class Contact extends Model
     protected $fillable = ['news_id','department','position','duty','demand','truetime','lastdotime'];
     //主键
     protected $primaryKey = 'news_id';
+
+    public function getContact()
+    {
+    	return 	$contacts = $this->select(['news_id','department','position','duty','demand','truetime','lastdotime'])->get();
+
+    }
 }
