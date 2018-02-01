@@ -16,7 +16,8 @@ class Contact extends Model
 
     public function getContact()
     {
-    	return 	$contacts = $this->select(['news_id','department','position','duty','demand','truetime','lastdotime'])->get();
+    	$contacts = $this->select(['news_id','department','position','duty','demand','truetime','lastdotime'])->get();
+        return $contacts;
 
     }
 }

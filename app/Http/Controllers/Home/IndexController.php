@@ -77,8 +77,11 @@ class IndexController extends HomeController
     public function contact()
     {	
     	$contents = new \App\Model\Admin\Contact;
+
     	$data = $contents->getContact();
-    	$this->assign['data'] = $data;
+        // dd($data->toArray());
+       // echo  arrval( $data , '0.duty' , '' );die;
+    	$this->assign['data'] = $data->toArray();
     	return view('home.contact.contact',$this->assign);
         
     	

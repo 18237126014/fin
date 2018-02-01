@@ -64,16 +64,15 @@ function getParetColumn($pid)
 }
 
 /**
-     * 读取数组的元素，防止为空情况
-     * @param Array $arr 数组
-     * @param String $key 键值，查询$arr数组中的下标值
-     * 支持 二维数组查找，key格式为 key1.key2，key1是一维数组下标，
-     * key2是二维数组下标，目前只支持两级
-     * @param String $val 默认值，查询不到数据的时候返回的默认值
-     * @return String 查询到的值，
-     * @author Toby.tu 2017-10-30
-     */
-    function arrval($arr=[],$key='',$val=''){
+ * 读取数组的元素，防止为空情况
+ * @param Array $arr 数组
+ * @param String $key 键值，查询$arr数组中的下标值
+ * 支持 二维数组查找，key格式为 key1.key2，key1是一维数组下标，
+ * key2是二维数组下标，目前只支持两级
+ * @param String $val 默认值，查询不到数据的时候返回的默认值
+ * @return String 查询到的值，
+ */
+function arrval($arr=[],$key='',$val=''){
     if(empty($arr) || empty($key)) return $val;
     if(stripos($key,'.') > -1){//多级数组
         $keys = explode('.',$key);
