@@ -18,5 +18,8 @@ class HomeController extends Controller
     	$menu_list = $column_model->getMenuList();
     	$this->assign['menu_list'] = $menu_list;
     }
+
+
+    
     
 }
