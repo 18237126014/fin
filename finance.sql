@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50714
 File Encoding         : 65001
 
-Date: 2018-01-29 17:51:36
+Date: 2018-02-02 17:57:39
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -96,7 +96,7 @@ INSERT INTO `zwf_admin_column` VALUES ('12', '投资者权益保护', '8', '0,8'
 INSERT INTO `zwf_admin_column` VALUES ('13', '产品知识', '8', '0,8', 'knowledge', '/education/knowledge', '1', '1', '/images/home/1470980127432067424.png', '/images/home/1470980124969001196.png', '0', '2017-11-30 15:27:30', '2017-11-30 15:27:30');
 INSERT INTO `zwf_admin_column` VALUES ('14', '常见问题', '8', '0,8', 'question', '/education/question', '1', '1', '/images/home/1470133156637090590.png', '/images/home/1470133157455051879.png', '0', '2017-11-30 15:28:07', '2018-01-04 09:45:32');
 INSERT INTO `zwf_admin_column` VALUES ('15', '联系我们', '0', '0,', 'contact', '/contact', '1', '1', null, null, '8', '2017-11-30 15:47:35', '2017-11-30 15:47:35');
-INSERT INTO `zwf_admin_column` VALUES ('16', '职位招聘', '15', '0,15', 'recruit', '/contact/recruit', '1', '1', null, null, '0', '2017-11-30 15:48:04', '2018-01-28 11:53:55');
+INSERT INTO `zwf_admin_column` VALUES ('16', '职位招聘', '15', '0,15', 'recruit', '/contact/recruit', '1', '1', '/images/home/1470979794503031542.png', '/images/home/1470979797973056209.png', '0', '2017-11-30 15:48:04', '2018-01-28 11:53:55');
 INSERT INTO `zwf_admin_column` VALUES ('17', '上市品种', '0', '0,', 'variety', '/variety', '1', '1', null, null, '3', '2018-01-28 23:21:18', '2018-01-28 23:24:07');
 INSERT INTO `zwf_admin_column` VALUES ('18', '原油', '17', '0,17', '#001', '/variety/#001', '1', '1', null, null, '0', '2018-01-28 23:23:55', '2018-01-28 23:23:55');
 INSERT INTO `zwf_admin_column` VALUES ('19', '布伦特原油', '17', '0,17', '#002', '/variety/#002', '1', '1', null, null, '0', '2018-01-28 23:24:45', '2018-01-28 23:24:45');
@@ -104,7 +104,7 @@ INSERT INTO `zwf_admin_column` VALUES ('20', '黄金T+D', '17', '0,17', '#003', 
 INSERT INTO `zwf_admin_column` VALUES ('21', '白银T+D', '17', '0,17', '#004', '/variety/#004', '1', '1', null, null, '0', '2018-01-28 23:26:24', '2018-01-28 23:26:24');
 INSERT INTO `zwf_admin_column` VALUES ('22', '下载中心', '0', '0,', 'download', '/download', '1', '1', null, null, '4', '2018-01-28 23:27:27', '2018-01-28 23:27:27');
 INSERT INTO `zwf_admin_column` VALUES ('23', '开户流程', '0', '0,', 'servicecenter', '/servicecenter', '1', '1', null, null, '5', '2018-01-28 23:30:16', '2018-01-28 23:30:16');
-INSERT INTO `zwf_admin_column` VALUES ('24', '持仓数据', '0', '0,', 'metals', '/metals', '1', '1', null, null, '6', '2018-01-28 23:31:00', '2018-01-28 23:31:00');
+INSERT INTO `zwf_admin_column` VALUES ('24', '持仓数据', '0', '0,', 'metals', '/metals', '1', '2', null, null, '6', '2018-01-28 23:31:00', '2018-02-01 15:29:39');
 INSERT INTO `zwf_admin_column` VALUES ('25', '社会责任', '0', '0,', 'social', '/social', '1', '1', null, null, '9', '2018-01-28 23:32:12', '2018-01-28 23:32:12');
 INSERT INTO `zwf_admin_column` VALUES ('28', '组织架构', '1', '0,1', 'organizationalstructure', '/related/organizationalstructure', '1', '1', '/images/home/1470132724809028526.png', '/images/home/1470132725887050169.png', '0', '2018-01-29 00:01:22', '2018-01-29 00:01:22');
 INSERT INTO `zwf_admin_column` VALUES ('29', '发展历程', '1', '0,1', 'development', '/related/development', '1', '1', '/images/home/1470132742705094983.png', '/images/home/1470132743659099956.png', '0', '2018-01-29 00:02:21', '2018-01-29 00:02:21');
@@ -124,12 +124,13 @@ CREATE TABLE `zwf_admin_contact` (
   `truetime` int(10) NOT NULL COMMENT '创建时间',
   `lastdotime` int(10) NOT NULL COMMENT '最后修改时间',
   PRIMARY KEY (`news_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='联系我们 职业招聘';
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COMMENT='联系我们 职业招聘';
 
 -- ----------------------------
 -- Records of zwf_admin_contact
 -- ----------------------------
-INSERT INTO `zwf_admin_contact` VALUES ('1', '现货中心', '现货副经理', '1、进行市场调研，完善现货交易模式；<br>2、根据交易中心整体发展战略协助设计交易品种、制定和修订交易制度；<br>3、及时收集、分析国内外关于大宗商品行业的政策、信息，并提出相关建议，全面跟进行业政策动态，及时汇总分析，基于对政策的理解，为公司争取利益最大化；<br>4、为现货交易的大宗商品,进行物流仓储,贸易结算,现货交收,的工作。<br>5、积极了解上下游客户对现货交易的需求,向公司提出合理化建议,以完善公司现货交易的整个流程。<br>6、维护好现有的交易客户,积极协助公司开拓新的资源,新的客户群。', '1、本专以上学历，贸易、金融、物流相关专业毕业；<br>2、熟悉大宗商品现货交易模式；<br>3、3年以上的贸易公司工作经验(大宗商品方面的矿产,金属等),对进出口贸易的流程,物流仓储,质量检验,结算等工作要熟悉。<br>4、良好的沟通能力，品行端正、责任心强，细致耐心，有敬业和团队合作精神，能承担较强工作压力。', '1', '1', '1514855814', '1515028890');
+INSERT INTO `zwf_admin_contact` VALUES ('1', '现货中心', '现货副经理', '1、进行市场调研，完善现货交易模式；<br>2、根据交易中心整体发展战略协助设计交易品种、制定和修订交易制度；<br>3、及时收集、分析国内外关于大宗商品行业的政策、信息，并提出相关建议，全面跟进行业政策动态，及时汇总分析，基于对政策的理解，为公司争取利益最大化；<br>4、为现货交易的大宗商品,进行物流仓储,贸易结算,现货交收,的工作。<br>5、积极了解上下游客户对现货交易的需求,向公司提出合理化建议,以完善公司现货交易的整个流程。<br>6、维护好现有的交易客户,积极协助公司开拓新的资源,新的客户群。', '1、本专以上学历，贸易、金融、物流相关专业毕业；<br>2、熟悉大宗商品现货交易模式；<br>3、3年以上的贸易公司工作经验(大宗商品方面的矿产,金属等),对进出口贸易的流程,物流仓储,质量检验,结算等工作要熟悉。<br>4、良好的沟通能力，品行端正、责任心强，细致耐心，有敬业和团队合作精神，能承担较强工作压力。', '1', '1', '1514855814', '1517550700');
+INSERT INTO `zwf_admin_contact` VALUES ('4', '市场部', '销售经理', '1、熟练掌握公司各类产品知识及销售话术，为客户提供最具针对性的在线招聘相关产品及服务；<br>2、通过电话销售的模式，开发新客户，维护、巩固及拓展老客户；<br>3、通过电话量、客户覆盖率、客户信息完整度与销售进程等考核方法推动完成客户成交；<br>4、根据公司要求完成销售目标，达成每日、每周、每月的各项关键绩效指标（KPI）；<br>5、按要求定期提交销售工作报表及工作总结（日、周、月）；<br>6、配合财务应收账款管理员做好个人应收账款的管理，保证公司的现金流。', '1、大学专科及以上学历，一年以上销售经验，有互联网/HR行业产品销售经验者优先；<br>2、具备良好的销售意识和电话沟通技巧，普通话流利；<br>3、富有开拓精神和良好的团队合作意识，有很强的学习和沟通能力，良好的协调能力、应变能力和解决问题的能力；<br>4、积极热情、敬业爱岗、心理素质佳、较强的抗压能力。', '1', '1', '1517551874', '1517551912');
 
 -- ----------------------------
 -- Table structure for zwf_admin_education

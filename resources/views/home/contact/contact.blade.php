@@ -24,7 +24,7 @@
 						<div class="contactUs_responsiblity cu_move_d">
 							<div class="cr_title cu_d_font">工作职责：</div>
 							<div class="cu_d_font cr_cnt">
-								<?php echo arrval($v,'duty');?>
+								<?php echo $v['duty'];?>
 							</div>
 						</div>
 						<div class="contactUs_request zp_move_d">

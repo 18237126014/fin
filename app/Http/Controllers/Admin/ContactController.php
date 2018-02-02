@@ -127,11 +127,11 @@ class ContactController extends Controller
     {
         DB::beginTransaction();
         try{
-            $mark = Contact::where('news_id',$request->post('id'))->update([
-                'state' => 2,
-                'lastdotime' => time()
-            ]);
-            //$mark =  Contact::where('news_id',$request->post('id'))->delete();
+            // $mark = Contact::where('news_id',$request->post('id'))->update([
+            //     'state' => 2,
+            //     'lastdotime' => time()
+            // ]);
+            $mark = Contact::where('news_id',$request->post('id'))->delete();
             DB::commit();
             return $mark;
         }catch (\Exception $e){

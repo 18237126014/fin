@@ -77,7 +77,10 @@
                                         <td>{{$v -> department}}</td>
                                         <td>{{$v -> position}}</td>
                                         <td>{{date('Y-m-d H:i:s',$v -> truetime)}}</td>
-                                        <td><a href="{{url('/admin/contact/edit').'/'.$v -> news_id}}">修改</a><span style="margin:0 10px;">|</span><a href="javascript:delNews({{$v -> news_id}})">删除</a></td>
+                                        <td><a href="{{url('/admin/contact/edit').'/'.$v -> news_id}}">修改</a>
+                                        <span style="margin:0 10px;">|</span>
+                                        <a href="javascript:delNews({{$v -> news_id}})">删除</a>
+                                        </td>
                                     </tr>
                                 @endforeach
                             </tbody>
