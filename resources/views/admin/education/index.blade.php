@@ -15,12 +15,12 @@
     </div>
     <div id="breadcrumb">
         <a href="#" title="返回后台首页" class="tip-bottom"><i class="icon-home"></i> 后台</a>
-        <a href="#" class="current">信息中心</a>
+        <a href="#" class="current">投资者教育</a>
     </div>
     <div class="container-fluid">
         <div class="clearfix" style="margin-top: 15px;">
             <p class="" style="float: left; width:20%;" >
-                <button class="btn btn-large" onclick="window.location.href='{{url('admin/education/add')}}'">添加资讯</button>
+                <button class="btn btn-large" onclick="window.location.href='{{url('admin/education/add')}}'">添加信息</button>
             </p>
             <div class="" style="float: left;width:80%;height:44px;text-align: -webkit-right;line-height: 44px;">
                 <form action="{{url('/admin/education/search')}}" id="searchForm" {{--onsubmit="return searchData();"--}}>
@@ -82,7 +82,12 @@
                                         <td>{{$news ->writer}}</td>
                                         <td>{{date('Y-m-d H:i:s',$news ->truetime)}}</td>
                                         <td>{{$news->onclick}}</td>
-                                        <td><a href="{{url('/admin/education/edit').'/'.$news ->news_id}}">修改</a><span style="margin:0 10px;">|</span><a href="javascript:delNews({{$news ->news_id}})">删除</a></td>
+                                        <td><a href="{{url('/admin/education/edit').'/'.$news ->news_id}}">修改</a>
+                                            <span style="margin:0 10px;">|</span>
+                                            <a href="javascript:disNews({{$news ->news_id}})">{{$news ->state == 1?'禁用':'启用'}}</a>
+                                            <span style="margin:0 10px;">|</span>
+                                            <a href="javascript:delNews({{$news ->news_id}})">删除</a>
+                                        </td>
                                     </tr>
                                 @endforeach
                             </tbody>
@@ -115,17 +120,31 @@
 @endsection
 @section('my-js')
     <script>
+         function disNews(id)
+        {
+            
+                $.ajax({
+
+                    url:'/admin/education/dis',
+                    type:'post',
+                    async:false,
+                    data:data,
+                )};
+                   
+        }
 
         function delNews(id)
         {
-            var con = confirm('请问是否是要删除这条数据');
+            var con = confirm('请问是否要删除这条数据');
             if(con == true)
             {
+
                 data = {
                     id :id,
                     _token:$('#token').val()
                 };
                 $.ajax({
+
                     url:'/admin/education/del',
                     type:'post',
                     async:false,

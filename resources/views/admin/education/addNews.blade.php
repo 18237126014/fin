@@ -1,5 +1,5 @@
 @extends('layouts.admin')
-@section('title', '添加文章')
+@section('title', '添加信息')
 @section('my-css')
     <link rel="stylesheet" href="{{url('css/admin/uniform.css')}}" />
 @endsection
@@ -15,8 +15,8 @@
     </div>
     <div id="breadcrumb">
         <a href="#" title="返回后台首页" class="tip-bottom"><i class="icon-home"></i> 后台</a>
-        <a href="{{url('/admin/information')}}" class="tip-bottom">文章列表</a>
-        <a href="#" class="current">添加文章</a>
+        <a href="{{url('/admin/education')}}" class="tip-bottom">投资者教育</a>
+        <a href="#" class="current">添加信息</a>
     </div>
     <div class="container-fluid">
         <div class="row-fluid">

@@ -91,6 +91,8 @@ Route::group(['prefix'=>'admin'],function()
         Route::get('edit/{id}','Admin\InformationController@showEdit');
         //执行修改
         Route::post('doEdit','Admin\InformationController@doEdit');
+        //显示隐藏
+        Route::post('dis','Admin\InformationController@displayNews');
         //删除
         Route::post('del','Admin\InformationController@delNews');
 

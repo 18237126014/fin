@@ -18,9 +18,9 @@ class EducationController extends Controller
     {
         $news = DB::table('zwf_admin_education as zwf')
             ->join('zwf_admin_education_data as zlq','zwf.news_id','=','zlq.news_id')
-            ->select('zwf.news_id','zwf.title','zwf.onclick','zwf.column_id','zwf.truetime','zlq.writer','zlq.befrom')
+            ->select('zwf.news_id','zwf.title','zwf.onclick','zwf.column_id','zwf.truetime','zlq.writer','zlq.befrom','zwf.state')
             ->latest('news_id')
-            ->where('state',1)
+            // ->where('state',1)
             ->paginate(10);
         //var_dump($news->toArray());
         foreach($news as &$v)
@@ -151,13 +151,24 @@ class EducationController extends Controller
         }
     }
 
+    //显示隐藏
+    public function displayNews(Request $request)
+    {
+        $state = $request->post('state');
+        dd($state);
+        
+    }
+
+
+    //删除
     public function delNews(Request $request)
     {
+
         DB::beginTransaction();
         try {
             /*$mark = Education::where('news_id', $request->post('id'))->delete();
             EducationData::where('news_id', $request->post('id'))->delete();*/
-            $mark = Information::where('news_id',$request->post('id'))->update([
+            $mark = Education::where('news_id',$request->post('id'))->update([
                 'state' => 2,
                 'lastdotime' => time()
 
