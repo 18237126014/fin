@@ -10,6 +10,7 @@
 <script src="{{url('plugin/scrollReveal/scrollReveal.min.js')}}"></script>
 @endsection
 @section('content')
+
 <!-- <!DOCTYPE html>
 <html lang="en">
 <head>

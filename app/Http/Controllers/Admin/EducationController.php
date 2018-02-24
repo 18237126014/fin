@@ -126,7 +126,9 @@ class EducationController extends Controller
         try {
 
             //新闻表 获取插入的id
-            $nwes_id = Education::where('news_id', $request->news_id)->update([
+            $news_id = $request->news_id;
+            Education::where('news_id', $news_id)->update([
+            // $nwes_id = Education::where('news_id', $request->news_id)->update([
                 'class_id' => $request->class_id,
                 'column_id' => $request->parent,
                 'title' => $request->articles_name,
@@ -134,14 +136,14 @@ class EducationController extends Controller
             ]);
             //内容表
             EducationData::where('news_id', $request->news_id)->update([
-                'news_id' => $nwes_id,
+                'news_id' => $news_id,
                 'class_id' => $request->class_id,
                 'writer' => $request->writer,
                 'befrom' => $request->news_befrom,
                 'newstext' => $request->news_content,
             ]);
             DB::commit();
-            return '<script>alert("编辑文章成功");window.location.href="/admin/information"</script>';
+            return '<script>alert("编辑文章成功");window.location.href="/admin/education"</script>';
         } catch (\Exception $e) {
             DB::rollBack();
             echo $e;
