@@ -114,6 +114,11 @@
             scaleEnabled:true,
             enterTag : 'br'
         });
+
+        $('select.weiter_select').on('change',function(){
+            var weitertxt = $(this).find('option:selected').text();
+            $('input[name=writer]').val(weitertxt);
+        });
     </script>
     <script src="{{url('js/admin/addNews.js')}}"></script>
 @endsection

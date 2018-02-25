@@ -84,7 +84,7 @@
                                         <td>{{$news->onclick}}</td>
                                         <td><a href="{{url('/admin/education/edit').'/'.$news ->news_id}}">修改</a>
                                             <span style="margin:0 10px;">|</span>
-                                            <a href="javascript:disNews({{$news ->news_id}})">{{$news ->state == 1?'禁用':'启用'}}</a>
+                                            <a href="javascript:disNews({{$news ->news_id}},{{$news ->state}})">{{$news ->state == 1?'禁用':'启用'}}</a>
                                             <span style="margin:0 10px;">|</span>
                                             <a href="javascript:delNews({{$news ->news_id}})">删除</a>
                                         </td>
@@ -120,18 +120,44 @@
 @endsection
 @section('my-js')
     <script>
-         function disNews(id)
-        {
-            
-                $.ajax({
-
-                    url:'/admin/education/dis',
-                    type:'post',
-                    async:false,
-                    data:data,
-                )};
-                   
+        function  disNews(id,state){
+            //定义post传参
+            var data = {
+                id : id,
+                state : state,
+            };
+            //token验证
+            data['_token'] = $('#token').val();
+            var url = '/admin/education/dis';//访问路由
+            $.post(url,data,function(rest){
+                if(rest == 1){
+                    location.replace(location.href);
+                }
+            });
         }
+        //  function disNews(id,state)
+        // {
+        //          data = {
+        //             id :id,
+        //             state:state,
+        //             _token:$('#token').val()
+        //         };
+        //         $.ajax({
+
+        //             url:'/admin/education/dis',
+        //             type:'post',
+        //             async:false,
+        //             data:data,
+        //         success:function(data){
+        //                 if(data == 1)
+        //                 {
+        //                     location.replace(location.href);
+        //                 }
+        //             }
+        //         });
+
+                   
+        // }
 
         function delNews(id)
         {
