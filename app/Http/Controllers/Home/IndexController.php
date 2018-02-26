@@ -59,10 +59,10 @@ class IndexController extends HomeController
     	return view('home.servicecenter.servicecenter',$this->assign);
     }
     //投资者教育
-    public function education()
-    {
-    	return view('home.education.education',$this->assign);
-    }
+    // public function education()
+    // {
+    // 	return view('home.education.education',$this->assign);
+    // }
     //投资者教育-业务规范
     public function business()
     {
