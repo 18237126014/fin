@@ -152,13 +152,6 @@ class EducationController extends Controller
     }
 
     //显示隐藏
-
-    // public function displayNews(Request $request)
-    // {
-    //     echo '11';
-    //     // $state = $request->post('state');
-    // }
-
     public function displayNews(Request $request)
     {
         $id = $request->post('id');
@@ -169,9 +162,7 @@ class EducationController extends Controller
             'lastdotime' => time()
             ]);
 
-
-        
-        
+    }
     
 
     //删除

@@ -1,11 +1,11 @@
 @extends('layouts.admin')
-@section('title', '信息中心')
+@section('title', '投资者教育')
 @section('my-css')
 
 @endsection
 @section('content')
     <div id="content-header">
-        <h1>信息中心</h1>
+        <h1>投资者教育</h1>
         <div class="btn-group">
             <a class="btn btn-large tip-bottom" title="Manage Files"><i class="icon-file"></i></a>
             <a class="btn btn-large tip-bottom" title="Manage Users"><i class="icon-user"></i></a>
@@ -137,6 +137,7 @@
                 }
             });
         }
+
          function disNews(id,state)
         {
                  data = {
