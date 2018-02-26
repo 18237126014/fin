@@ -112,6 +112,9 @@ Route::group(['prefix'=>'admin'],function()
         Route::get('edit/{id}','Admin\EducationController@showEdit');
         //执行修改
         Route::post('doEdit','Admin\EducationController@doEdit');
+        //显示隐藏
+        Route::post('dis','Admin\EducationController@displayNews');
+        
         //删除
         Route::post('del','Admin\EducationController@delNews');
         //查询数据

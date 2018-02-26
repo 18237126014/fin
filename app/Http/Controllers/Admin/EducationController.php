@@ -152,14 +152,27 @@ class EducationController extends Controller
     }
 
     //显示隐藏
+
     // public function displayNews(Request $request)
     // {
     //     echo '11';
     //     // $state = $request->post('state');
-        
-        
     // }
 
+    public function displayNews(Request $request)
+    {
+        $id = $request->post('id');
+        $state = $request->post('state');
+        $state = ($state == 1?2:1);
+        return Education::where('news_id',$id)->update([
+            'state' => $state,
+            'lastdotime' => time()
+            ]);
+
+
+        
+        
+    
 
     //删除
     public function delNews(Request $request)
