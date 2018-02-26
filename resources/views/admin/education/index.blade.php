@@ -64,8 +64,9 @@
                             <thead>
                             <tr>
                                 <th>id</th>
-                                <th>标题</th>
+                                <!-- <th>标题</th> -->
                                 <th>栏目</th>
+                                <th>标题</th>
                                 <th>发布人</th>
                                 <th>发布时间</th>
                                 <th>点击</th>
@@ -77,8 +78,9 @@
                                 @foreach($newses as $news)
                                     <tr>
                                         <td>{{$news -> news_id}}</td>
-                                        <td>{{$news ->title}}</td>
+                                        <!-- <td>{{$news ->title}}</td> -->
                                         <td>{{$news->column_name}}</td>
+                                        <td>{{$news ->title}}</td>
                                         <td>{{$news ->writer}}</td>
                                         <td>{{date('Y-m-d H:i:s',$news ->truetime)}}</td>
                                         <td>{{$news->onclick}}</td>
@@ -128,10 +130,11 @@
                     url:'/admin/education/dis',
                     type:'post',
                     async:false,
-                    data:data,
-                )};
+                    // data:data,
+                });
                    
         }
+
 
         function delNews(id)
         {

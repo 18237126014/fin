@@ -152,12 +152,13 @@ class EducationController extends Controller
     }
 
     //显示隐藏
-    public function displayNews(Request $request)
-    {
-        $state = $request->post('state');
-        dd($state);
+    // public function displayNews(Request $request)
+    // {
+    //     echo '11';
+    //     // $state = $request->post('state');
         
-    }
+        
+    // }
 
 
     //删除
