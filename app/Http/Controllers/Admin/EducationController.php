@@ -27,7 +27,7 @@ class EducationController extends Controller
         {
 
             $column_name = Column::select(['column_name'])->find($v -> column_id)->column_name;
-            //var_dump($column_name);
+            // var_dump($column_name);
             $v->column_name = $column_name;
         }
         //dump($news);
@@ -171,13 +171,13 @@ class EducationController extends Controller
 
         DB::beginTransaction();
         try {
-            /*$mark = Education::where('news_id', $request->post('id'))->delete();
-            EducationData::where('news_id', $request->post('id'))->delete();*/
-            $mark = Education::where('news_id',$request->post('id'))->update([
-                'state' => 2,
-                'lastdotime' => time()
+            $mark = Education::where('news_id', $request->post('id'))->delete();
+            EducationData::where('news_id', $request->post('id'))->delete();
+            // $mark = Education::where('news_id',$request->post('id'))->update([
+            //     'state' => 2,
+            //     'lastdotime' => time()
 
-            ]);
+            // ]);
             DB::commit();
             return $mark;
         } catch (\Exception $e) {

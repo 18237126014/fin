@@ -15,7 +15,7 @@
     </div>
     <div id="breadcrumb">
         <a href="#" title="返回后台首页" class="tip-bottom"><i class="icon-home"></i> 后台</a>
-        <a href="{{url('/admin/information')}}" class="tip-bottom">文章列表</a>
+        <a href="{{url('/admin/education')}}" class="tip-bottom">投资者教育</a>
         <a href="#" class="current">添加文章</a>
     </div>
     <div class="container-fluid">
@@ -33,9 +33,9 @@
                             {{csrf_field()}}
                             <input type="hidden" name="news_id" value="{{$news->news_id}}">
                             <div class="control-group">
-                                <label class="control-label">文章名</label>
+                                <label class="control-label">小标题</label>
                                 <div class="controls">
-                                    <input type="text" name="articles_name" placeholder="请输入文章名" value="{{old('articles_name') ? old('articles_name'):$news -> title }}"/>
+                                    <input type="text" name="articles_name" placeholder="请输入小标题" value="{{old('articles_name') ? old('articles_name'):$news -> title }}"/>
                                     @if(count($errors)>0)
                                         <span class="help-block">{{$errors -> first('articles_name')}}</span>
                                     @endif
@@ -64,7 +64,8 @@
                             <div class="control-group">
                                 <label class="control-label">作者</label>
                                 <div class="controls">
-                                    <input type="text" name="writer" placeholder="作者" value="{{old('writer_1') ?old('writer_1') : $newsInfo->writer}}" style="width: 10%;"/>
+                                    <!-- <input type="text" name="writer" placeholder="作者" value="{{old('writer_1') ?old('writer_1') : $newsInfo->writer}}" style="width: 10%;"/> -->
+                                    <input type="text" name="writer" placeholder="作者"  style="width: 10%;"/>
                                     <select class="form-control weiter_select">
                                         <option></option>
                                         @foreach($adminUsers as $writer)
@@ -118,6 +119,11 @@
         $('select.weiter_select').on('change',function(){
             var weitertxt = $(this).find('option:selected').text();
             $('input[name=writer]').val(weitertxt);
+        });
+
+        $('select.befrom_select').on('click',function(){
+            var weitertxt = $(this).find('option:selected').text();
+            $('input[name=news_befrom]').val(weitertxt);
         });
     </script>
     <script src="{{url('js/admin/addNews.js')}}"></script>
