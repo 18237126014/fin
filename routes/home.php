@@ -43,11 +43,11 @@ Route::group(['namespace'=>'Home'],function()
     //开户流程
     Route::get('servicecenter','IndexController@servicecenter');
     //投资者教育
-    Route::get('education','IndexController@education');
-    Route::get('education/law','IndexController@education');
+    Route::get('education','EducationController@education');
+    Route::get('education/law','EducationController@education');
 
     //投资者教育-业务规范
-    Route::get('education/business','IndexController@business');
+    Route::get('education/business','EducationController@business');
     //投资者教育-业务规范-现货
     // Route::get('business/goods','IndexController@goods');
     // 联系我们

@@ -26,15 +26,15 @@
 								<span class="icon">
 									<i class="icon-align-justify"></i>
 								</span>
-                        <h5>添加新的文章</h5>
+                        <h5>添加新的内容</h5>
                     </div>
                     <div class="widget-content nopadding">
                         <form action="{{url('/admin/education/doAdd')}}" method="post" class="form-horizontal" enctype="multipart/form-data">
                             {{csrf_field()}}
                             <div class="control-group">
-                                <label class="control-label">文章名</label>
+                                <label class="control-label">小标题</label>
                                 <div class="controls">
-                                    <input type="text" name="articles_name" placeholder="请输入文章名" value="{{old('articles_name')}}"/>
+                                    <input type="text" name="articles_name" placeholder="请输小标题" value="{{old('articles_name')}}"/>
                                     @if(count($errors)>0)
                                         <span class="help-block">{{$errors -> first('articles_name')}}</span>
                                     @endif
@@ -113,6 +113,15 @@
             initialFrameHeight:500,
             scaleEnabled:true,
             enterTag : 'br'
+        });
+
+        $('select.weiter_select').on('change',function(){
+            var weitertxt = $(this).find('option:selected').text();
+            $('input[name=writer]').val(weitertxt);
+        });
+        $('select.befrom_select').on('change',function(){
+            var weitertxt = $(this).find('option:selected').text();
+            $('input[name=news_befrom]').val(weitertxt);
         });
     </script>
     <script src="{{url('js/admin/addNews.js')}}"></script>

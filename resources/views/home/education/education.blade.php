@@ -16,14 +16,17 @@
 @section('content')
     <div class="main_investorEdu"  data-scroll-reveal="enter left over 0.5s after 0.5s">
         <div class="investorEdu_content">
-            <div class="investorEdu_header"><p>法律法规</p></div>
+        
+            <div class="investorEdu_header"><p>{{$info->column_name}}</p></div>
             <div class="investorEdu_center">
                 <div class="rules">
                     <ul class="menu">
+                        @foreach($res as $v)
                         <li class="foucs" id="foucs">
-                            <a href="javascript:void(0)" onclick="show()">消费者权益保护法</a>
+                            <a href="javascript:void(0)" onclick="show()">{{$v->title}}</a>
                         </li>
-                        <li>
+                        @endforeach
+                        <!-- <li>
                             <a href="javascript:void(0)" onclick="show()">中华人民共和国合同法司法解释(二)</a>
                         </li>
                         <li>    
@@ -40,7 +43,7 @@
                         </li>
                         <li>
                             <a href="javascript:void(0)" onclick="show()">中国人民银行取消26项行政审批项目</a>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </div>              

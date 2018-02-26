@@ -1,11 +1,11 @@
 @extends('layouts.admin')
-@section('title', '信息中心')
+@section('title', '投资者教育')
 @section('my-css')
 
 @endsection
 @section('content')
     <div id="content-header">
-        <h1>信息中心</h1>
+        <h1>投资者教育</h1>
         <div class="btn-group">
             <a class="btn btn-large tip-bottom" title="Manage Files"><i class="icon-file"></i></a>
             <a class="btn btn-large tip-bottom" title="Manage Users"><i class="icon-user"></i></a>
@@ -64,8 +64,9 @@
                             <thead>
                             <tr>
                                 <th>id</th>
-                                <th>标题</th>
+                                <!-- <th>标题</th> -->
                                 <th>栏目</th>
+                                <th>标题</th>
                                 <th>发布人</th>
                                 <th>发布时间</th>
                                 <th>点击</th>
@@ -77,8 +78,9 @@
                                 @foreach($newses as $news)
                                     <tr>
                                         <td>{{$news -> news_id}}</td>
-                                        <td>{{$news ->title}}</td>
+                                        <!-- <td>{{$news ->title}}</td> -->
                                         <td>{{$news->column_name}}</td>
+                                        <td>{{$news ->title}}</td>
                                         <td>{{$news ->writer}}</td>
                                         <td>{{date('Y-m-d H:i:s',$news ->truetime)}}</td>
                                         <td>{{$news->onclick}}</td>
@@ -135,29 +137,30 @@
                 }
             });
         }
-        //  function disNews(id,state)
-        // {
-        //          data = {
-        //             id :id,
-        //             state:state,
-        //             _token:$('#token').val()
-        //         };
-        //         $.ajax({
 
-        //             url:'/admin/education/dis',
-        //             type:'post',
-        //             async:false,
-        //             data:data,
-        //         success:function(data){
-        //                 if(data == 1)
-        //                 {
-        //                     location.replace(location.href);
-        //                 }
-        //             }
-        //         });
+         function disNews(id,state)
+        {
+                 data = {
+                    id :id,
+                    state:state,
+                    _token:$('#token').val()
+                };
+                $.ajax({
 
-                   
-        // }
+                    url:'/admin/education/dis',
+                    type:'post',
+                    async:false,
+                    data:data,
+                success:function(data){
+                        if(data == 1)
+                        {
+                            location.replace(location.href);
+                        }
+                    }
+                });
+        
+        }
+
 
         function delNews(id)
         {

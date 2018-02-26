@@ -40,4 +40,18 @@ class Column extends Model
     	return [];
 
     }
+    //(Home)通过url取id
+    public function getIdByUrl($url='')
+    {
+        if(empty($url))
+        {
+            return [];
+        }
+
+        $data =$this->where('column_chaining',$url)->first();
+       if(!empty($data)){
+        return $data;
+       }
+       return [];
+    }
 }

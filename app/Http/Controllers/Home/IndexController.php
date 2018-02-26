@@ -4,6 +4,10 @@ namespace App\Http\Controllers\Home;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Home\HomeController;
+use Illuminate\Support\Facades\DB;
+// use App\Model\Admin\Column;
+// use App\Model\Admin\Education;
+// use App\Model\Admin\EducationData;
 
 class IndexController extends HomeController
 {
@@ -59,9 +63,40 @@ class IndexController extends HomeController
     	return view('home.servicecenter.servicecenter',$this->assign);
     }
     //投资者教育
+
+    public function education()
+     {   //$educations =new App\Model\Admin\Education;
+
+        return view('home.education.education',$this->assign);
+    }
     // public function education()
-    // {
-    // 	return view('home.education.education',$this->assign);
+    // {  
+    //     $news = DB::table('zwf_admin_education as zwf')
+    //         ->join('zwf_admin_education_data as zlq','zwf.news_id','=','zlq.news_id')
+    //         ->select('zwf.news_id','zwf.title','zwf.onclick','zwf.column_id','zwf.truetime','zlq.writer','zlq.befrom','zwf.state')
+    //         ->latest('news_id')
+    //         ->where('state',1)
+    //         ->paginate(10);
+    //     //var_dump($news->toArray());
+    //     // $columns_id = Column::select();
+    //     // dd($columns_id);
+    //     foreach($news as &$v)
+    //     {
+
+    //         $column_name = Column::select(['column_name'])->find($v ->column_id)->column_name;
+    //         // var_dump($column_name);
+    //         $v->column_name = $column_name;
+
+    //     }
+
+        
+    //     return view('home.education.education',$this->assign)->with([
+    //         'newses' => $news,
+    //         'search' => []
+    //     ]);
+       
+    // 	// return view('home.education.education',$this->assign);
+
     // }
     //投资者教育-业务规范
     public function business()
