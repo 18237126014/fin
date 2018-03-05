@@ -15,7 +15,11 @@
 @section('content')
     <div class="main_investorEdu"  data-scroll-reveal="enter left over 0.5s after 0.5s">
         <div class="investorEdu_content">
-        <div class="investorEdu_header"><p>{{$title}}</p></div>
+        <div class="investorEdu_header">
+            <a href="javascript:history.go(-1)">
+                <p>{{$title}}</p>
+            </a>
+        </div>
             <div class="investorEdu_center">
                 <div class="rules">    
                     {!! $res !!}
