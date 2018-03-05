@@ -23,7 +23,7 @@
                     <ul class="menu">
                         @foreach($res as $v)
                         <li class="foucs" id="foucs">
-                            <a href="javascript:void(0)" onclick="show()">{{$v->title}}</a>
+                            <a href="#">{{$v->title}}</a>
                         </li>
                         @endforeach
                         <!-- <li>

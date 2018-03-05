@@ -1,5 +1,5 @@
 @extends('home.public.base')
-@section('title', '投资者教育-业务规范')
+@section('title', '投资者教育-详情')
 @section('my-css')
 <link rel="stylesheet" href="{{url('/css/home/jquery.css')}}">
 <link rel="stylesheet" type="text/css" href="{{url('/css/home/share.css')}}">
@@ -16,13 +16,15 @@
 @section('content')
     <div class="main_investorEdu"  data-scroll-reveal="enter left over 0.5s after 0.5s">
         <div class="investorEdu_content">
-            <div class="investorEdu_header"><p>业务规范</p></div>
+            <div class="investorEdu_header"><p>风险</p></div>
             <div class="investorEdu_center">
                 <div class="rules">
                     <ul class="menu">
+                    
                         <li class="foucs" id="foucs">
-                            <a href="#">现货交收管理办法</a>
+                            <a href="#">风险管理</a>
                         </li>
+                    
                     </ul>
                 </div>
             </div>              
