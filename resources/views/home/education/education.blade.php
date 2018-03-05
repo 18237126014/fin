@@ -23,7 +23,7 @@
                     <ul class="menu">
                         @foreach($res as $v)
                         <li class="foucs" id="foucs">
-                            <a href="#">{{$v->title}}</a>
+                            <a href="{{url('education/show')}}/{{$v->news_id}}">{{$v->title}}</a>
                         </li>
                         @endforeach
                         <!-- <li>

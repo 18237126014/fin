@@ -20,7 +20,7 @@ class Education extends Model
         return $this ->hasOne('App\Model\Admin\EducationData','news_id','news_id');
     }
 
-    //(Home)通过id获取一个栏目的信息
+    //(Home)通过栏目id获取一个栏目的信息
     public function getMessageById($id='') 
     {
         if(empty($id))
@@ -33,5 +33,19 @@ class Education extends Model
         }
         return [];
 
+    }
+    //通过主键id 获取数据
+    public function getDataById($news_id=0)
+    {
+        if(empty($news_id)){
+            return [];
+        }
+        $data =$this->where('news_id',$news_id)->first();
+        if(!empty($data))
+        {
+            return $data;
+        }
+
+        return [];
     }
 }
