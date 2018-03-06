@@ -21,22 +21,32 @@ class EducationData extends Model
     }
     //获取文本信息content
     public function getContentById($id=0)
+
     {
         if(empty($id))
         {
             return '';
         }
 
-        $info = $this->where('news_id',$id)->first();
-        if(!empty($info))
-        {
-            $title = $info->newstext;
-            return $title;
+        $info =$this ->where('news_id',$id)->first();
+            if(!empty($info)){
+            $content = $info->newstext;
+            if(!empty($content))
+            {
+                return $content;
+            }else
+            {
+                return '';
+            }
 
-        }else
-        {
-            return '';
-        }
+            }else{
+                return '';
+            }
+    
         
     }
+
+        
+
+
 }

@@ -108,6 +108,7 @@ class EducationController extends HomeController
         $data = $model_data->getDataById($id);
         $title = $data->title;
 
+
         $this->assign['res'] = $res;
         $this->assign['title'] = $title;
         return view('home.education.edudetail',$this->assign);
