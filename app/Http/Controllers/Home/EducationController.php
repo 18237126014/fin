@@ -91,16 +91,25 @@ class EducationController extends HomeController
 
         $model_education = new \App\Model\Admin\Education();
         $res = $model_education->getMessageById($column_id);
+        
         $this->assign['info'] = $info;
         $this->assign['res'] = $res;
+        
 
         return view('home.education.education',$this->assign);
     }
     
     //投资者教育-详情展示
-    public function showEducation()
+    public function showEducation($id=0)
     {   
+        $model = new \App\Model\Admin\EducationData();
+        $res = $model->getContentById($id);
+        $model_data = new \App\Model\Admin\Education();
+        $data = $model_data->getDataById($id);
+        $title = $data->title;
 
+        $this->assign['res'] = $res;
+        $this->assign['title'] = $title;
         return view('home.education.edudetail',$this->assign);
     }
      

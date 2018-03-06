@@ -19,4 +19,24 @@ class EducationData extends Model
     {
         return $this ->hasOne('App\Model\Admin\Education','news_id','news_id');
     }
+    //获取文本信息content
+    public function getContentById($id=0)
+    {
+        if(empty($id))
+        {
+            return '';
+        }
+
+        $info = $this->where('news_id',$id)->first();
+        if(!empty($info))
+        {
+            $title = $info->newstext;
+            return $title;
+
+        }else
+        {
+            return '';
+        }
+        
+    }
 }

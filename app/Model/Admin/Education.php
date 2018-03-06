@@ -34,4 +34,19 @@ class Education extends Model
         return [];
 
     }
+    //通过news_id获取文章标题
+    public function getDataById($id=0)
+    {
+        if(empty($id))
+        {
+            return '';
+        }
+        $data = $this->where('news_id',$id)->first();
+        if(!empty($data))
+        {
+            return $data;
+        }else{
+            return '';
+        }
+    }
 }

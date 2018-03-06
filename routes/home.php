@@ -57,7 +57,7 @@ Route::group(['namespace'=>'Home'],function()
     //投资者教育-常见问题
     Route::get('education/question','EducationController@question');
     //投资者教育-详情展示
-    Route::get('education/law{id}','EducationController@');
+    Route::get('education/show/{id}','EducationController@showEducation');
     //投资者教育-业务规范-现货
     // Route::get('business/goods','IndexController@goods');
     // 联系我们

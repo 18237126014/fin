@@ -16,13 +16,13 @@
 @section('content')
     <div class="main_investorEdu"  data-scroll-reveal="enter left over 0.5s after 0.5s">
         <div class="investorEdu_content">
-            <div class="investorEdu_header"><p>风险</p></div>
+            <div class="investorEdu_header"><p>{{$title}}</p></div>
             <div class="investorEdu_center">
                 <div class="rules">
                     <ul class="menu">
                     
                         <li class="foucs" id="foucs">
-                            <a href="#">风险管理</a>
+                            <a href="#">{!! $res !!}</a>
                         </li>
                     
                     </ul>
