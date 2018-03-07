@@ -154,4 +154,25 @@ class ColumnController extends Controller
         ]);
         return '200';
     }
+
+    //查看子栏目
+    // public function getSubsection(Request $request)
+    // {  
+
+    //     $id = $request->post('id');
+    //     $Subsection = Column::where('column_pid',$id)->get();
+        
+    //     return view('admin.column.getSubsection')->with([
+    //             'info' =>$Subsection
+    //         ]);
+    // }
+
+    public function getSubsection($id)
+    {  
+        $Subsection = Column::where('column_pid',$id)->paginate(5);
+        
+        return view('admin.column.getSubsection')->with([
+                'info' =>$Subsection
+            ]);
+    }
 }

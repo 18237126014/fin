@@ -67,6 +67,9 @@ Route::group(['prefix'=>'admin'],function()
         Route::post('doEdit','Admin\ColumnController@doEdit');
         Route::get('editDisplay/{id}','Admin\ColumnController@editDisplay');
         Route::post('doDel','Admin\ColumnController@doDel');
+        //查看子栏目
+        // Route::post('getSubsection','Admin\ColumnController@getSubsection');
+        Route::get('getSubsection/{id}','Admin\ColumnController@getSubsection');
     });
     //分类管理
     Route::group(['middleware' => ['admin.check.id','admin.check.permissions'],'prefix'=>'class'],function()
