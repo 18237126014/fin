@@ -19,4 +19,16 @@ class InformationData extends Model
     {
         return $this ->hasOne('App\Model\Admin\Information','news_id','news_id');
     }
+
+    //查询数据
+    public function getInformationData($id)
+    {
+        $data = $this->where('news_id',$id)->get();
+        if(!empty($data))
+        {
+            return $data;
+        }else{
+            return '';
+        }
+    }
 }

@@ -30,12 +30,15 @@ Route::group(['namespace'=>'Home'],function()
     //关于我们-发展历程
     Route::get('related/development','IndexController@develoPment');
     //信息中心-中心公告
-    Route::get('information','IndexController@information');
-    Route::get('information/announcement','IndexController@information');
+    Route::get('information','InformationController@information');
+    Route::get('information/announcement','InformationController@information');
+    //信息中心-中心公告-详情页
+    Route::get('information/announcement/detailed/{id}','InformationController@detailed');
+    
     //信息中心-资讯要闻
-    Route::get('information/impnews','IndexController@impnews');
+    Route::get('information/impnews','InformationController@impnews');
     //信息中心-中心动态
-    Route::get('information/dynamics','IndexController@dynamics');
+    Route::get('information/dynamics','InformationController@dynamics');
     //上市品种
     Route::get('variety','IndexController@variety');
     //下载中心
