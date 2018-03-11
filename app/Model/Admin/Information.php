@@ -32,4 +32,13 @@ class Information extends Model
         }
 
     }
+    //查询一条
+    public function getInformationById($id=0)
+    {
+        if(!empty($id)){
+            return $this->where('news_id',$id)->first();
+        }else{
+            return '';
+        }
+    }
 }

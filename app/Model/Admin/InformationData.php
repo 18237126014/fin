@@ -23,7 +23,7 @@ class InformationData extends Model
     //查询数据
     public function getInformationData($id)
     {
-        $data = $this->where('news_id',$id)->get();
+        $data = $this->where('news_id',$id)->first();
         if(!empty($data))
         {
             return $data;

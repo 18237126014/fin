@@ -31,7 +31,14 @@ class InformationController extends HomeController
 
         $model_getInformationData = new \App\Model\Admin\InformationData();
         $info = $model_getInformationData->getInformationData($id);
-        dd($info);
+        $model_getInformation = new \App\Model\Admin\Information();
+        $info_information = $model_getInformation->getInformationById($id);
+        $title = $info_information->title;
+        
+
+
+        $this->assign['info'] = $info;
+        $this->assign['title'] = $title;
         return view('home.information.detailed',$this->assign);
     }
     //信息中心-中心动态
