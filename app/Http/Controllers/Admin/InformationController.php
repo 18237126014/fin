@@ -71,14 +71,17 @@ class InformationController extends Controller
             'articles_name' => 'bail|required|unique:zwf_admin_information,title|max:100',
             'smalltext' => 'bail|max:255',
         ],$messages);
+
         //错误返回
         if($validator -> fails())
         {
-            return back()->withErrors($validator)->withInput();
+            return  back()->withErrors($validator)->withInput();
+           
         }
         //整理数据
         //上传图片
         $data['cover'] = $file -> upFile($_FILES['cover']);
+
         //添加数据 到新闻表
         DB::beginTransaction();
         try{
@@ -94,6 +97,7 @@ class InformationController extends Controller
                 'truetime' => time(),
                 'lastdotime' => time()
             ]);
+
             //内容表
             InformationData::create([
                 'news_id' =>  $nwes_id,
@@ -132,8 +136,11 @@ class InformationController extends Controller
         ]);
     }
     //执行修改文章
-    public function doEdit(Request $request)
+    public function doEdit(Request $request,UploadFileController $file)
     {
+        //修改图片
+        $data['cover'] = $file -> upFile($_FILES['cover']);
+       
         DB::beginTransaction();
         try{
 
@@ -142,6 +149,7 @@ class InformationController extends Controller
                 'class_id' => $request -> class_id,
                 'column_id' => $request -> parent,
                 'title' => $request -> articles_name,
+                'titlepic' => $data['cover'],
                 'smalltext' => $request ->smalltext,
                 'keyboard' => $request -> keywords,
                 'lastdotime' => time()

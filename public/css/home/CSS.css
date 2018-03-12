@@ -180,6 +180,7 @@ p {
 }
 a:link img, a:visited img {
     border: none;
+  
 }
 
 .clearFloat {
@@ -3337,7 +3338,7 @@ text-align:center;
 .cd-content {
     position: relative;
     width: 1400px;
-    height: 1641px;
+    /*height: 1641px;*/
     margin: 0 auto;
 }
 .cd-content .c-p {
@@ -3453,7 +3454,7 @@ text-align:center;
 }
 .right {
     float: right;
-    height: 600px;
+    /*height: 600px;*/
     clear: both;
     width: 25%;
     line-height: 37px;

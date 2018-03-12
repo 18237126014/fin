@@ -5,6 +5,11 @@
 <link rel="stylesheet" type="text/css" href="{{url('/css/home/bootstrap.min.css')}}">
 <link rel="stylesheet" type="text/css" href="{{url('/css/home/CSS.css')}}">
 <link rel="stylesheet" type="text/css" href="{{url('/css/home/share.css')}}">
+<style>
+.footer .copyright{
+	line-height: 10px;
+}
+</style>
 @endsection
 @section('my-js')
 <script type="text/javascript" src="{{url('/js/home/common.js')}}"></script>
@@ -16,15 +21,15 @@
 @section('content')
 <div class="main">
 	<div class="title">
-		中心公告
+		{{$info_column->column_name}}
 	</div>
 	<div class="cb-content">
 		@foreach($info as $v)
 		<div class="c-b-p">
 			<a href="{{'/information/announcement/detailed'}}/{{$v->news_id}}">
 				<!-- <img src="/images/home/fmt.jpg" alt=""> -->
-				<!-- <img src="{{$v['titlepic']}}" alt=""> -->
-				<img src="/upload/images/2018/0309/1520561075783294.jpg" alt="">
+				<img src="{{$v->titlepic}}" alt="">
+				<!-- <img src="/upload/images/2018/0309/1520561075783294.jpg" alt=""> -->
 				<div>{{$v->title}}</div>
 				<div>{{date('Y-m-d H:i:s',$v->lastdotime)}}</div>
 				<div>{{$v->smalltext}}</div>
@@ -46,11 +51,6 @@
 
 		{{$info->links()}}
 	
-	<!-- <ul class="pagination pagination-s">
-	    <li><a href="#">&laquo;</a></li>
-	    <li><a href="#">1</a></li>
-	    <li><a href="#">2</a></li>
-	    <li><a href="#">&raquo;</a></li>
-	</ul><br> -->
+	
 	@endsection
 	

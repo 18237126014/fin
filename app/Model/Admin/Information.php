@@ -19,11 +19,11 @@ class Information extends Model
     {
         return $this ->hasOne('App\Model\Admin\InformationData','news_id','news_id');
     }
-    //查询Information数据
-    public function getInformation()
+    //根据分类id查询
+    public function getInformation($id=0)
     {
         // $data = $this->select('*')->get();
-        $data = $this ->select('*')->paginate(10);
+        $data = $this ->where('column_id',$id)->paginate(10);
         if(!empty($data))
         {
             return $data;

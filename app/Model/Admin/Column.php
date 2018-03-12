@@ -54,4 +54,22 @@ class Column extends Model
        }
        return [];
     }
+
+    //通过column_id查询信息
+    public function getInformationById($id='')
+    {
+        if(empty($id))
+        {
+            return [];
+        }
+
+        $information = $this->where('column_id',$id)->first();
+        
+        if(!empty($information))
+        {
+            return $information;
+        }
+
+        return [];
+    }
 }
