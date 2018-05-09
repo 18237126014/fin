@@ -28,6 +28,7 @@ class Column extends Model
     				$list[$menu->column_id] = $menu->toArray();
     			}else{
     				$list[$menu->column_pid]['list'][$menu->column_id] = $menu->toArray();
+                    
     			}
     			// var_dump($menu->toArray());
     		}

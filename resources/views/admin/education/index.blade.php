@@ -133,6 +133,7 @@
             var url = '/admin/education/dis';//访问路由
             $.post(url,data,function(rest){
                 if(rest == 1){
+                    
                     location.replace(location.href);
                 }
             });

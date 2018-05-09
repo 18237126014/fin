@@ -14,7 +14,11 @@ class IndexController extends HomeController
 	public $assign = [];
     //显示首页
     public function index()
-    {
+    {   
+        //获取轮播图
+        $model_images = new \App\Model\Admin\Images();
+        $info = $model_images->getContact();
+        $this->assign['info'] = $info;
         return view('home.index',$this->assign);
     }
     //关于我们

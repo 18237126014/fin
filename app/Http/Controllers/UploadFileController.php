@@ -162,7 +162,7 @@ class UploadFileController extends Controller
         return array(
             //"state" => $this->stateInfo,
             // "url" => 'http://[!--img.hosts--]'.str_replace('/upload/images/','',$this->fullName),
-            // "url" => '/upload/images'.str_replace('/upload/images/','',$this->fullName),
+            // "url" => '/upload/images'.str_replace('/uoapld/images/','',$this->fullName),
             "url" => $this->fullName,
             "title" => $this->fileName,
             "original" => $this->oriName,

@@ -27,6 +27,7 @@ class BannerController extends Controller
     public function doAdd(Request $request,UploadFileController $file)
     {
         $img = $file -> upFile($_FILES['img']);
+        
         // dd($img);
         //添加数据
         //开启事务
@@ -36,6 +37,7 @@ class BannerController extends Controller
                 'url' => $img,
                 'update_time' => time()
             ]);
+            
             // echo $img_id;die;
             DB::table('banner_item')->insert([
                 'img_id' => $img_id,

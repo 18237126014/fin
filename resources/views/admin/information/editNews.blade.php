@@ -37,7 +37,7 @@
                                 <div class="controls">
                                     <input type="text" name="articles_name" placeholder="请输入文章名" value="{{old('articles_name') ? old('articles_name'):$news -> title }}"/>
                                     @if(count($errors)>0)
-                                        <span class="help-block">{{$errors -> first('articles_name')}}</span>
+                                        <span class="help-block">11{{$errors -> first('articles_name')}}</span>
                                     @endif
                                 </div>
                             </div>
@@ -64,7 +64,8 @@
                             <div class="control-group">
                                 <label class="control-label">封面图片</label>
                                 <div class="controls">
-                                    <input type="file" name="cover" >
+                                <!-- 修改图片上传的bug -->
+                                    <input type="file" name="cover">
                                     @if(count($errors)>0)
                                         <span class="help-block">{{$errors -> first('cover')}}</span>
                                     @endif

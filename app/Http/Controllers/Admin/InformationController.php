@@ -99,7 +99,7 @@ class InformationController extends Controller
             ]);
 
             //内容表
-            InformationData::create([
+            $res = InformationData::create([
                 'news_id' =>  $nwes_id,
                 'class_id' => $request -> class_id,
                 'writer' => $request -> writer,
@@ -107,6 +107,7 @@ class InformationController extends Controller
                 'newstext' => $request -> news_content,
                 'seotext' => $request -> seotext
             ]);
+            
             DB::commit();
             return '<script>alert("添加文章成功");window.location.href="/admin/information"</script>';
         }catch (\Exception $e){
@@ -139,7 +140,17 @@ class InformationController extends Controller
     public function doEdit(Request $request,UploadFileController $file)
     {
         //修改图片
-        $data['cover'] = $file -> upFile($_FILES['cover']);
+        if($_FILES['cover']['size'] == 0){
+            echo "<script>alert('封面图片不能为空');window.history.back(-1);</script>";
+        }else{
+            $data['cover'] = $file -> upFile($_FILES['cover']);
+        }
+
+        // if(empty($file -> upFile($_FILES['cover']))){
+        //     echo '<script>alert ("封面图片不能为空");window.history.back(-1)</script>';
+        // }else{
+        //     return $data['cover'] = $file -> upFile($_FILES['cover']);
+        // }
        
         DB::beginTransaction();
         try{
@@ -168,7 +179,7 @@ class InformationController extends Controller
         }catch (\Exception $e){
             DB::rollBack();
             echo $e;
-            //return '<script>alert("编辑文章失败");window.location.href="/admin/information"</script>';
+            // return '<script>alert("编辑文章失败");window.location.href="/admin/information"</script>';
         }
     }
     //删除修改文章

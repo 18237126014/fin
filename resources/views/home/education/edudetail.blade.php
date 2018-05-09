@@ -10,10 +10,18 @@
 <script type="text/javascript" src="{{url('plugin/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js')}}"></script>
 <script type="text/javascript" src="{{url('plugin/mCustomScrollbar/mCustomScrollbar.js')}}"></script>
 <script src="{{url('/plugin/scrollReveal/scrollReveal.min.js')}}"></script>
+<style>
+    .edu_div {
+    width: 100%;
+    clear: both;
+    background: #F1F2F4;
+    position: relative;
+        }
+</style>
 @endsection
-
 @section('content')
-    <div class="main_investorEdu"  data-scroll-reveal="enter left over 0.5s after 0.5s">
+    <!-- <div class="main_investorEdu"  data-scroll-reveal="enter left over 0.5s after 0.5s"> -->
+    <div class="edu_div"  data-scroll-reveal="enter left over 0.5s after 0.5s">
         <div class="investorEdu_content">
         <div class="investorEdu_header">
             <a href="javascript:history.go(-1)">
@@ -27,5 +35,4 @@
             </div>              
         </div>
     </div>
-
 @endsection

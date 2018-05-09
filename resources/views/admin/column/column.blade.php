@@ -84,7 +84,7 @@
     </div>
 @endsection
 @section('my-js')
-    <!-- <script>
+   <!--  <script>
         function getSubsection(id)
         {
             //定义post传参

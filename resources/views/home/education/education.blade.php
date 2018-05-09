@@ -50,7 +50,7 @@
         </div>
     </div>
 
-    <div class="pdfc">
+    <!-- <div class="pdfc">
         <div class="rules_cnt">
             <div class="rules_cnt_l">
                 <ul class="l_title">
@@ -90,7 +90,7 @@
                 <div class="nex next_start"><a href="javascript:void(0)"></a></div>
             </div>
         </div>
-    </div>
+    </div> -->
 @endsection
 <!-- 尾部 -->
    
